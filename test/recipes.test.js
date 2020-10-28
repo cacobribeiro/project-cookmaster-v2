@@ -1227,7 +1227,7 @@ describe('9 - Crie um endpoint para a adição de uma imagem a uma receita', () 
   });
 });
 
-describe.only('10 - Crie ume endpoint para visualizar a imagem de uma receita', () => {
+describe('10 - Crie ume endpoint para visualizar a imagem de uma receita', () => {
   let connection;
   let db;
 
