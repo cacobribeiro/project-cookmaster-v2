@@ -11,7 +11,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 ### ANTES DE COMEÇAR A DESENVOLVER:
 
 1. Clone o repositório
-  * `git clone https://github.com/tryber/sd-03-cookmaster-v2.git`.
+  * `git clone https://github.com/tryber/sd-04-cookmaster-v2.git`.
   * Entre na pasta do repositório que você acabou de clonar:
     * `cd sd-04-cookmaster-v2`
 
