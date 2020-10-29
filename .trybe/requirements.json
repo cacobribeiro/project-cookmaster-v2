@@ -37,7 +37,11 @@
       "bonus": false
     },
     {
-      "description": "10 - Cadastramento de admin",
+      "description": "10 - Crie ume endpoint para visualizar a imagem de uma receita",
+      "bonus": false
+    },
+    {
+      "description": "11 - Cadastramento de admin",
       "bonus": true
     }
   ]
