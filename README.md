@@ -416,17 +416,11 @@ O resultado retornado para listar uma receita que não existe deverá ser confor
 
 ### 6 - Permissões do usuário admin
 
-- Por padrão, deve existir no banco de dados ao menos um usuário com a Role _admin_.
+Crie um arquivo `seeds.js` na raiz do projeto com uma query do Mongo DB capaz de inserir um usuário na coleção _users_ com os seguintes valores:
 
-- Esse usuário tem o poder de criar, deletar, atualizar ou remover qualquer receita, independente de quem a cadastrou.
+`{ name: 'admin', email: 'root@email.com', password: 'admin', role: 'admin' }`
 
-- Crie um script na raiz do seu projeto com a extensão `.js`. Este arquivo deve inicializar o banco de dados e cadastrar um usuário admin com o login `root` e a senha `admin`.
-
-### Além disso, as seguintes verificações serão feitas:
-
-**[Será validado que o projeto tem um arquivo de seed, com um comando para inserir um usuário root e verifico que é possivel fazer login]**
-
-Será validado no arquivo `seed.js` existe a query para criar um usuário root
+Obs.: Esse usuário tem o poder de criar, deletar, atualizar ou remover qualquer receita, independente de quem a cadastrou. Isso será solicitado ao longo dos próximos requisitos.
 
 ### 7 - Crie um endpoint para a edição de uma receita
 
