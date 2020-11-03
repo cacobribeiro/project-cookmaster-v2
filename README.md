@@ -416,7 +416,7 @@ O resultado retornado para listar uma receita que não existe deverá ser confor
 
 ### 6 - Permissões do usuário admin
 
-Crie um arquivo `seeds.js` na raiz do projeto com uma query do Mongo DB capaz de inserir um usuário na coleção _users_ com os seguintes valores:
+Crie um arquivo `seed.js` na raiz do projeto com uma query do Mongo DB capaz de inserir um usuário na coleção _users_ com os seguintes valores:
 
 `{ name: 'admin', email: 'root@email.com', password: 'admin', role: 'admin' }`
 
