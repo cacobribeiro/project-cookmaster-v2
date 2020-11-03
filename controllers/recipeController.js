@@ -10,7 +10,6 @@ const {
 const validateJWT = require('../auth/validateJWT');
 const { getByEmail } = require('../models/usersModels');
 const valid = require('../validations');
-const { ObjectId } = require('mongodb');
 
 const recipeRouter = Router();
 
