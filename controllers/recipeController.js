@@ -10,6 +10,7 @@ const {
 const validateJWT = require('../auth/validateJWT');
 const { getByEmail } = require('../models/usersModels');
 const valid = require('../validations');
+const { ObjectId } = require('mongodb');
 
 const recipeRouter = Router();
 
@@ -21,13 +22,13 @@ recipeRouter.post(
     const result = await valid.recipe({ ...req.body });
     const user = await getByEmail(req.user.email);
     const { name, ingredients, preparation } = req.body;
-
+    const userId = user._id;
     switch (true) {
       case result.status === 'invalid':
         return res.status(400).json({ message: 'Invalid entries. Try again.' });
 
       case result.status === 'ok': {
-        const recipe = await newRecipe(user._id, name, ingredients, preparation);
+        const recipe = await newRecipe(userId, name, ingredients, preparation);
         return res.status(201).json({ recipe });
       }
       default:
