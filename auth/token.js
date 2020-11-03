@@ -8,8 +8,7 @@ function createToken(payload) {
     algorithm: 'HS256',
   };
 
-  const { password: _, ...userWithoutPass } = payload;
-  const token = jwt.sign(userWithoutPass, secret, headers);
+  const token = jwt.sign(payload, secret, headers);
 
   return token;
 }
