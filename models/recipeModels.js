@@ -1,5 +1,5 @@
-const connection = require('./connection');
 const { ObjectId } = require('mongodb');
+const connection = require('./connection');
 
 const newRecipe = async (userId, name, ingredients, preparation) => {
   const results = await connection().then((db) =>
