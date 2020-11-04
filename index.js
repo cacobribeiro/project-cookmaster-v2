@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const path = require('path');
 const bodyParser = require('body-parser');
 const controller = require('./controllers');
 
@@ -13,6 +14,8 @@ const PORT = process.env.PORT || 3000;
 app.get('/', (request, response) => {
   response.send();
 });
+
+app.use('/images', express.static(path.join(__dirname + '/uploads')));
 
 app.use('/users', controller.users);
 
