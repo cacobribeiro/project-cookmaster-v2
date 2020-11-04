@@ -9,7 +9,7 @@ const newUserValidation = async ({ name, email, password }) => {
       return { status: 'invalid' };
     case !EMAIL_REGEX.test(email):
       return { status: 'invalid' };
-    case exists:
+    case exists !== null:
       return { status: 'exists' };
     default:
       return { status: 'ok' };
